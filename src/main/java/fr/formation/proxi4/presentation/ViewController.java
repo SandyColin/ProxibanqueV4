@@ -24,7 +24,7 @@ public class ViewController {
 		LOGGER.debug("Vous entrez sur la page sondage");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("surveys");
-		mav.addObject("surveys", this.surveyService.readAll();
+		mav.addObject("surveys", this.surveyService.readAll());
 		return mav;
 	}
 	
@@ -33,6 +33,8 @@ public class ViewController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("survey");
 		Survey survey = this.surveyService.read(id);
+		Hibernate.initialize(survey);
+		mav.addObject("survey", survey);
 		return mav;
 	}
 	
