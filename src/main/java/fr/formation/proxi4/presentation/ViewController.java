@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import fr.formation.proxi4.metier.SurveyService;
 import fr.formation.proxi4.metier.Survey;
@@ -65,14 +66,18 @@ public class ViewController {
 	}
 	
 	@RequestMapping(path = "create", method = RequestMethod.POST)
-	public ModelAndView createForm(Integer id, Date startingDate, Date previsionalDate, Date closeDate) {
+	public ModelAndView createForm(Integer id, Date startingDate, Date previsionalDate, Date closeDate, RedirectAttributes attributes) {
+		String message = null;
 		ModelAndView mav = new ModelAndView("create");	
 		Survey survey = this.surveyService.read(id);
 		survey.setStartingDate(startingDate);
 		survey.setStartingDate(previsionalDate);
 		survey.setStartingDate(closeDate);		
-		this.surveyService.create(survey);		
+		if(survey.getId() == null && this.surveyService.create(survey) != null) {
+			message = "Sondage bien ajouté !";
+		} 	
 		mav.addObject("survey", survey);
+		attributes.addFlashAttribute("message", message);
 		return mav;
 	}
 	
