@@ -1,7 +1,14 @@
 package fr.formation.proxi4.persistance;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CustomerDao extends JpaRepository<T, ID> {
+import fr.formation.proxi4.metier.Customer;
 
+
+@Repository
+public interface CustomerDao extends JpaRepository<Customer, Integer> {
+
+	Customer findByClientNumber(String clientNumber);
+	
 }
