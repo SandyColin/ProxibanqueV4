@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -29,6 +31,8 @@ public class Survey {
 	private Date closeDate;
 	
 	@Column
+	@OneToMany
+	@JoinColumn(name="id_survey", referencedColumnName="id")
 	private List<Opinion> opinions;
 	
 	@Column
