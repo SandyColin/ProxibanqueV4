@@ -28,7 +28,7 @@ public class Opinion {
 	
 	
 	@OneToOne
-	@JoinColumn(name="id_opinion", referencedColumnName="id")
+	@JoinColumn(name="id_customer", referencedColumnName="id")
 	private Customer customer;
 	
 	

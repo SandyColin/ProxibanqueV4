@@ -31,8 +31,7 @@ public class Survey {
 	private Date closeDate;
 	
 	
-	@OneToMany
-	@JoinColumn(name="id_survey", referencedColumnName="id")
+	@OneToMany(mappedBy= "survey")
 	private List<Opinion> opinions;
 	
 	@Column

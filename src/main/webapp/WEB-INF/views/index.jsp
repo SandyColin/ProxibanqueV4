@@ -1,15 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <meta name="author" content="">
-<title>Proxibanque SI</title>
+<title>ProxiBanque SI</title>
+
+<!-- Bootstrap core CSS -->
 <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Custom fonts for this template -->
@@ -32,6 +34,15 @@
 </head>
 <body>
 
+<header class="masthead">
+		<div class="container">
+			<div class="intro-text" style="padding-top: 150px; padding-bottom: 200px;">
+				<div class="intro-lead-in">Bienvenue sur le système
+					d'information</div>
+				<div class="intro-heading text-uppercase">PROXIBANQUE</div>
+			</div>
+		</div>
+	</header>
 	<section id="index-display">
 		<h1 class="page-title"></h1>
 		<div>
@@ -61,305 +72,7 @@
 		</div>
 
 	</section>
-	<section class="bg-light" id="team">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 text-center">
-					<h2 class="section-heading text-uppercase">Sexy &amp; Chocolat
-						Dream Team</h2>
-					<h3 class="section-subheading text-muted">Découvrez notre
-						superbe équipe !</h3>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-						<h4>Jessica Di Marco</h4>
-						<p class="text-muted">Lead Designer</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-						<h4>Sarah Ourabah</h4>
-						<p class="text-muted">Lead CandySeller</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-						<h4>Axel Coënon</h4>
-						<p class="text-muted">Lead Grifter</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-						<h4>Leila Bouzidi</h4>
-						<p class="text-muted">Lead Conceptor</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-						<h4>Vincent Darcq</h4>
-						<p class="text-muted">Lead Development</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-						<h4>Marie Boulez</h4>
-						<p class="text-muted">Lead Chocolate Eater</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-						<h4>Quentin Jouhault</h4>
-						<p class="text-muted">Lead Tech</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-						<h4>Bixente Olasaguirre</h4>
-						<p class="text-muted">Lead Recatcher</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-						<h4>Omar Boughanem</h4>
-						<p class="text-muted">Lead Couscous Cooker</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-						<h4>Julien Chapel</h4>
-						<p class="text-muted">Lead Granny</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-						<h4>Sidney Scelli</h4>
-						<p class="text-muted">Lead Dreamer</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-						<h4>Benoit Darenne</h4>
-						<p class="text-muted">Lead Married</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-						<h4>Ahmed Belmouden</h4>
-						<p class="text-muted">Lead Tachter</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-						<h4>Sandy Colin</h4>
-						<p class="text-muted">Lead Lego Builder</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="team-member">
-						<img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-						<h4>Nexpresso</h4>
-						<p class="text-muted">Lead Coffee Awakener!</p>
-						<ul class="list-inline social-buttons">
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-twitter"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-facebook-f"></i>
-							</a></li>
-							<li class="list-inline-item"><a href="#"> <i
-									class="fab fa-linkedin-in"></i>
-							</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-8 mx-auto text-center">
-					<p class="large text-muted">Notre team est à votre écoute,
-						n'hésitez pas à nous contacter.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-
+	
 	<!-- Footer -->
 	<footer>
 		<div class="container">
