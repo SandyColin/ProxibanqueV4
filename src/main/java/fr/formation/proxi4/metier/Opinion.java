@@ -26,12 +26,12 @@ public class Opinion {
 	@Column
 	private String comment;
 	
-	@Column
+	
 	@OneToOne
 	@JoinColumn(name="id_opinion", referencedColumnName="id")
 	private Customer customer;
 	
-	@Column
+	
 	@ManyToOne
 	private Survey survey;
 

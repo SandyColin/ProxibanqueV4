@@ -9,6 +9,6 @@ import fr.formation.proxi4.metier.Customer;
 @Repository
 public interface CustomerDao extends JpaRepository<Customer, Integer> {
 
-	Customer findByClient_Number(String clientNumber);
+	Customer findByClientNumber(String clientNumber);
 	
 }

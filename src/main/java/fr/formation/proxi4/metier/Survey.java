@@ -30,7 +30,7 @@ public class Survey {
 	@Column
 	private Date closeDate;
 	
-	@Column
+	
 	@OneToMany
 	@JoinColumn(name="id_survey", referencedColumnName="id")
 	private List<Opinion> opinions;

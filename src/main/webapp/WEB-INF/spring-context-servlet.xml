@@ -35,7 +35,7 @@
 	<!-- Conf persistance JPA -->
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-		<property name="persistenceUnitName" value="proxibanquev4" />
+		<property name="persistenceUnitName" value="Proxibanquev4" />
 	</bean>
 	
 	<bean id="transactionManager"

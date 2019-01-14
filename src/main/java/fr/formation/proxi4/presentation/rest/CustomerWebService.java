@@ -18,7 +18,7 @@ import fr.formation.proxi4.metier.CustomerService;
 @CrossOrigin(origins= {"http:/localhost:4200", "http:/localhost:8080"})
 public class CustomerWebService {
 
-	@Autowired
+	
 	private CustomerService service;
 	
 	@GetMapping

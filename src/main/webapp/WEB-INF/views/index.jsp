@@ -35,7 +35,7 @@
 	<section id="index-display">
 		<h1 class="page-title"></h1>
 		<div>
-			<c:if test="${ true survey.isActive }">
+			<c:if test="${survey.isActive }">
 			</c:if>
 		</div>
 		<div class="client-display">
