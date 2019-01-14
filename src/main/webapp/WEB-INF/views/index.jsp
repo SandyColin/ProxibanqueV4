@@ -32,7 +32,7 @@
 <link href="css/agency.min.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
 </head>
-<body>
+<body id="page-top">
 
 <header class="masthead">
 		<div class="container">
@@ -45,8 +45,10 @@
 	</header>
 	<section id="index-display">
 		<h1 class="page-title"></h1>
+		
 		<div>
 			<c:if test="${survey.isActive }">
+			<p> Le sondage n°${survey.id} est en cours</p>
 			</c:if>
 		</div>
 		<div class="client-display">
@@ -64,7 +66,7 @@
 				</div>
 				<div>
 					<a href="close.html?id= ${survey.id}">
-						<button class="button">Cloturer un sondage</button>
+						<button class="button" disabled="${survey.isActive } ? 'disabled' : false">Cloturer un sondage</button>
 					</a>
 				</div>
 

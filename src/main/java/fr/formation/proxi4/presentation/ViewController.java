@@ -67,7 +67,7 @@ public class ViewController {
 		return mav;
 	}
 	
-	@RequestMapping(path = "create", method = RequestMethod.POST)
+	@RequestMapping(path = "form", method = RequestMethod.POST)
 	public String createForm(Survey survey, RedirectAttributes attributes) {
 		String message = null;
 		this.surveyService.create(survey);	
@@ -75,6 +75,7 @@ public class ViewController {
 		attributes.addFlashAttribute("message", message);
 		return "redirect:/index.html";
 	}
+	
 	
 	@RequestMapping("close")
 	public String closeCurrentSurvey(Integer id, RedirectAttributes attributes) {
