@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,32 +47,56 @@
 			</div>
 		</div>
 	</header>
-
-	<!-- Affichage des clients -->
-	<section id="clients-display">
-	<h1 class="page-title">Liste des sondages</h1>
-	<div class="client-display">
-		<c:forEach var="survey" items="${surveys}">
-			<div class="client-container">
-				<div class="client-contain">
-					<p class="name"> ${survey.id} </p> 
-					<p class="text"> ${survey.opinions[1]} </p> 
-					<p class="text"> ${!survey.opinions[1]} </p>
-						<div class="button-container">
-							<div>
-								<a href="index.html">
-									<button class = "button">Revenir à l'accueil</button>
-								</a>
-							</div>
-							
-							
-				
-						</div>
-				</div>
-			</div>
-			</c:forEach>
+	
+	<form:form modelAttribute="survey" method="post" action="form.html"
+		onsubmit="validateForm(event)">
+		<div class="form-group">
+			<label for="startingDate">Date de démarrage :</label>
+			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
+				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
+			<form:input id="startingDate" path="startingDate" class="form-control" />
 		</div>
-	</section>
+		<div class="form-group">
+			<label for="provisionalDate">Date de fin prévisionnelle :</label>
+			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
+				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
+			<form:input id="provisionalDate" path="provisionalDate" class="form-control"></form:input>
+		</div>
+		<button>Valider</button>
+		<a href="index.html">Retour à l'accueil</a>
+	</form:form>
+	<script src="js/form.js"></script>
+	
+	
+	
+
+<!-- 	<section class="head"></section> -->
+<!-- 	<h1 class="page-title">Création d'un sondage</h1> -->
+<!-- 	<div class="form-cont"> -->
+<!-- 		<form method="post" action="form.html"> -->
+<!-- 			<div class="edit-form"> -->
+<!-- 				<div class="label-container"> -->
+<!-- 					<label for="beginDate">Date de démarage</label>  -->
+<%-- 					<input type="text" id="beginDate" value="${survey.startingDate}" name="beginDate" maxlength="45"> --%>
+<!-- 				</div> -->
+<!-- 				<div class="input-container"> -->
+<!-- 				<label for="endDate">Date de fin prévisionnelle</label>  -->
+<%-- 					<input type="text" id="endDate" value="${survey.provisionalDate}" name="endDate" maxlength="45"> --%>
+					
+<!-- 				</div>  -->
+				
+<!-- 			</div> -->
+<!-- 		<div class="buttons"> -->
+<!-- 		<a href="index.html"> -->
+<!-- 			<button class="button">Valider</button> -->
+<!-- 			</a> -->
+			
+<!-- 			<a href="index.html"> -->
+<!-- 				<button class="button">Retour à l'accueil</button> -->
+<!-- 			</a> -->
+<!-- 		</div> -->
+<!-- 		</form> -->
+<!-- 		</div> -->
 	<!-- Team -->
 	</body>
 	</html>
