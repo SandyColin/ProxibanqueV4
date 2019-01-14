@@ -1,5 +1,18 @@
 package fr.formation.proxi4.metier;
 
-public class SurveyService extends RestService {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import fr.formation.proxi4.persistance.SurveyDao;
+
+
+
+public class SurveyService extends RestService<Survey> {
+	@Autowired
+	private SurveyDao dao;
+	
+	protected JpaRepository<Survey, Integer> getDao() {
+		return this.dao;
+	}
 
 }

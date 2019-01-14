@@ -1,5 +1,17 @@
 package fr.formation.proxi4.metier;
 
-public class OpinionService extends RestService {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import fr.formation.proxi4.persistance.OpinionDao;
+
+
+
+public class OpinionService extends RestService<Opinion> {
+	
+	private OpinionDao dao;
+	
+	protected JpaRepository<Opinion, Integer> getDao() {
+		return this.dao;
+	}
 
 }
