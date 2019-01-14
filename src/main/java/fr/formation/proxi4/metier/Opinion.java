@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,9 +27,12 @@ public class Opinion {
 	private String comment;
 	
 	@Column
+	@OneToOne
+	@JoinColumn(name="id_opinion", referencedColumnName="id")
 	private Customer customer;
 	
 	@Column
+	@ManyToOne
 	private Survey survey;
 
 	public Integer getId() {
