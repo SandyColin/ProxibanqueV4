@@ -1,7 +1,6 @@
 package fr.formation.proxi4.presentation;
 
-import java.util.Date;
-
+import java.time.LocalDate;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.log4j.Logger;
@@ -33,6 +32,9 @@ public class ViewController {
 		LOGGER.debug("Message récupéré après redirection ? '" + message + "'");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
+		mav.addObject("message", message);
+		Survey currentSurvey = this.surveyService.getCurrentSurvey();
+		mav.addObject("survey", currentSurvey);
 		return mav;
 	}
 	
@@ -66,29 +68,22 @@ public class ViewController {
 	}
 	
 	@RequestMapping(path = "create", method = RequestMethod.POST)
-	public ModelAndView createForm(Integer id, Date startingDate, Date previsionalDate, Date closeDate, RedirectAttributes attributes) {
+	public String createForm(Survey survey, RedirectAttributes attributes) {
 		String message = null;
-		ModelAndView mav = new ModelAndView("create");	
-		Survey survey = this.surveyService.read(id);
-		survey.setStartingDate(startingDate);
-		survey.setStartingDate(previsionalDate);
-		survey.setStartingDate(closeDate);		
-		if(survey.getId() == null && this.surveyService.create(survey) != null) {
-			message = "Sondage bien ajouté !";
-		} 	
-		mav.addObject("survey", survey);
+		this.surveyService.create(survey);	
+		message = "Sondage bien ajouté !";	
 		attributes.addFlashAttribute("message", message);
-		return mav;
+		return "redirect:/index.html";
 	}
 	
 	@RequestMapping("close")
-	public ModelAndView closeCurrentSurvey(Integer id) {
+	public String closeCurrentSurvey(Integer id, RedirectAttributes attributes) {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("close");
 		Survey survey = this.surveyService.read(id);
 		Hibernate.initialize(survey);
-		mav.addObject("survey", survey);
-		mav.addObject("isEdit", true);
-		return mav;
+		survey.setCloseDate(LocalDate.now());
+		this.surveyService.update(survey);
+		return "redirect:/index.html";
 	}
 }

@@ -1,6 +1,6 @@
 package fr.formation.proxi4.metier;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -22,13 +22,13 @@ public class Survey {
 	private Integer id;
 	
 	@Column
-	private Date startingDate;
+	private LocalDate startingDate;
 	
 	@Column
-	private Date provisionalDate;
+	private LocalDate provisionalDate;
 	
 	@Column
-	private Date closeDate;
+	private LocalDate closeDate;
 	
 	
 	@OneToMany
@@ -46,27 +46,27 @@ public class Survey {
 		this.id = id;
 	}
 
-	public Date getStartingDate() {
+	public LocalDate getStartingDate() {
 		return startingDate;
 	}
 
-	public void setStartingDate(Date startingDate) {
+	public void setStartingDate(LocalDate startingDate) {
 		this.startingDate = startingDate;
-	}
+	} 
 
-	public Date getProvisionalDate() {
+	public LocalDate getProvisionalDate() {
 		return provisionalDate;
 	}
 
-	public void setProvisionalDate(Date provisionalDate) {
+	public void setProvisionalDate(LocalDate provisionalDate) {
 		this.provisionalDate = provisionalDate;
 	}
 
-	public Date getCloseDate() {
+	public LocalDate getCloseDate() {
 		return closeDate;
 	}
 
-	public void setCloseDate(Date closeDate) {
+	public void setCloseDate(LocalDate closeDate) {
 		this.closeDate = closeDate;
 	}
 
