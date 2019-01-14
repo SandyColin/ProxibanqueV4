@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" isELIgnored="false" %>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -34,9 +34,10 @@
 </head>
 <body>
 
-<header class="masthead">
+	<header class="masthead">
 		<div class="container">
-			<div class="intro-text" style="padding-top: 150px; padding-bottom: 200px;">
+			<div class="intro-text"
+				style="padding-top: 150px; padding-bottom: 200px;">
 				<div class="intro-lead-in">Bienvenue sur le système
 					d'information</div>
 				<div class="intro-heading text-uppercase">PROXIBANQUE</div>
@@ -46,8 +47,13 @@
 	<section id="index-display">
 		<h1 class="page-title"></h1>
 		<div>
-			<c:if test="${survey.isActive }">
-			</c:if>
+				<c:if test="${survey.isActive}">
+					<div>
+						<a href="close.html?id= ${survey.id}">
+							<button class="button">Cloturer un sondage</button>
+						</a>
+					</div>
+				</c:if>
 		</div>
 		<div class="client-display">
 
@@ -62,17 +68,11 @@
 						<button class="button">Créer un sondage</button>
 					</a>
 				</div>
-				<div>
-					<a href="close.html?id= ${survey.id}">
-						<button class="button">Cloturer un sondage</button>
-					</a>
-				</div>
-
 			</div>
 		</div>
 
 	</section>
-	
+
 	<!-- Footer -->
 	<footer>
 		<div class="container">

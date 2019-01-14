@@ -35,6 +35,7 @@ public class ViewController {
 		mav.addObject("message", message);
 		Survey currentSurvey = this.surveyService.getCurrentSurvey();
 		mav.addObject("survey", currentSurvey);
+		System.out.println(currentSurvey);
 		return mav;
 	}
 	

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" isELIgnored="false" %>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -35,11 +35,12 @@
 </head>
 
 <body id="page-top">
-	
+
 	<!-- Header -->
 	<header class="masthead">
 		<div class="container">
-			<div class="intro-text" style="padding-top: 150px; padding-bottom: 200px;">
+			<div class="intro-text"
+				style="padding-top: 150px; padding-bottom: 200px;">
 				<div class="intro-lead-in">Bienvenue sur le système
 					d'information</div>
 				<div class="intro-heading text-uppercase">PROXIBANQUE</div>
@@ -49,29 +50,24 @@
 
 	<!-- Affichage des clients -->
 	<section id="clients-display">
-	<h1 class="page-title">Liste des sondages</h1>
-	<div class="client-display">
-		<c:forEach var="survey" items="${surveys}">
-			<div class="client-container">
-				<div class="client-contain">
-					<p class="name"> ${survey.id} </p> 
-					<p class="text"> ${survey.opinions[1]} </p> 
-					<p class="text"> ${!survey.opinions[1]} </p>
-						<div class="button-container">
-							<div>
-								<a href="index.html">
-									<button class = "button">Revenir à l'accueil</button>
-								</a>
-							</div>
-							
-							
-				
-						</div>
-				</div>
-			</div>
+		<h1 class="page-title">Liste des sondages</h1>
+		<div class="client-display">
+			<c:forEach var="survey" items="${surveys}">
+				<div class="client-container">
+						<p class="name">${survey.id}</p>
+<%-- 						<p class="name">${opinion.comment}</p> --%>
+<%-- 						<p class="text">${opinion.comment}</p> --%>
+<%-- 						<p class="text">Date de fin prévue : ${survey.provisionalDate}</p> --%>
+						<div class="button-container"></div>
+					</div>
 			</c:forEach>
+			<div>
+				<a href="index.html">
+					<button class="button">Revenir à l'accueil</button>
+				</a>
+			</div>
 		</div>
 	</section>
 	<!-- Team -->
-	</body>
-	</html>
+</body>
+</html>
