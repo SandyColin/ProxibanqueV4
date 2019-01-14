@@ -49,7 +49,7 @@
 
 	<!-- Affichage des clients -->
 	<section id="clients-display">
-	<h1 class="page-title">Liste de vos clients</h1>
+	<h1 class="page-title">Liste des sondages</h1>
 	<div class="client-display">
 		<c:forEach var="survey" items="${surveys}">
 			<div class="client-container">
