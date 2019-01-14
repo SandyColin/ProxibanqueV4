@@ -4,6 +4,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ import fr.formation.proxi4.metier.Opinion;
 public class OpinionWebService {
 
 	@GetMapping("/{id}")
-	public Opinion createOpinion(@PathVariable Opinion opinion) {
+	public Opinion createOpinion(@PathVariable Integer id, @RequestBody Opinion opinion) {
 		
 		return null;
 	}

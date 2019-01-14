@@ -5,6 +5,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,7 +23,7 @@ public class CustomerWebService {
 	private CustomerService service;
 	
 	@GetMapping("/{id}")
-	public Customer checkCustomer(@PathVariable String clientNumber) {
+	public Customer checkCustomer(@PathVariable Integer id, @RequestBody String clientNumber) {
 		
 		return null;
 	}
