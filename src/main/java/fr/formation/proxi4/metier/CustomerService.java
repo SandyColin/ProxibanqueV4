@@ -8,7 +8,12 @@ import org.springframework.stereotype.Service;
 
 import fr.formation.proxi4.persistance.CustomerDao;
 
-
+/**
+* Classe permettant la communication entre un objet client et la DAO.
+*
+* @author Adminl
+*
+*/
 @Service
 public class CustomerService extends RestService<Customer> {
 	
@@ -18,7 +23,12 @@ public class CustomerService extends RestService<Customer> {
 	protected JpaRepository<Customer, Integer> getDao() {
 		return this.dao;
 	}
-	
+	 /**
+     * Méthode permettant de récupérer l'id d'un client par son numéro de banque.
+     *
+     * @param clientNumber
+     * @return
+     */
 	public Integer getCustomerIdByClientNumber(String clientNumber) {
 		return this.dao.findByClientNumber(clientNumber).getId();
 	}

@@ -1,7 +1,15 @@
 package fr.formation.proxi4.metier;
 
 import java.time.LocalDate;
-
+/**
+* Bean représentant une opinion laissé par un client lorsqu'il répond à un
+* sondage. L'opinion a les attributs nbPos pour compter le nombre d'avis positifs, 
+* nbNeg pour compter le nombre d'avis négatifs, 
+* la date de démarrage du sondage.
+*
+* @author Adminl
+*
+*/
 public class ResponseSurvey {
 	
 	public Integer nbPos;

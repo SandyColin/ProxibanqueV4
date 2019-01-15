@@ -11,7 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.formation.proxi4.metier.Customer;
 import fr.formation.proxi4.metier.CustomerService;
 
-
+/**
+* Classe permettant la liaison entre le backend et le frontend d'un objet
+* opinion.
+*
+* @author Adminl
+*
+*/
 @RestController
 @RequestMapping("/customer")
 @Transactional(readOnly=true)
@@ -20,7 +26,11 @@ public class CustomerWebService {
 
 	@Autowired
 	private CustomerService customerService;
-	
+	/**
+	* Méthode permettant de retourner un client via son numéroClient
+    *
+    * @return client de type Customer
+    */
 	@GetMapping("/{clientNumber}")
 	public Customer checkCustomer(@PathVariable String clientNumber) {
 		Integer clientId=this.customerService.getCustomerIdByClientNumber(clientNumber);

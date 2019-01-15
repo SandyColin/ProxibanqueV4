@@ -9,7 +9,13 @@ import org.springframework.stereotype.Service;
 
 import fr.formation.proxi4.persistance.SurveyDao;
 
-
+/**
+* Classe permettant de lier un objet sondage à la DAO. Elle comprends les
+* traitements métier du sondage.
+*
+* @author Adminl
+*
+*/
 @Service
 public class SurveyService extends RestService<Survey> {
 	@Autowired
@@ -18,7 +24,11 @@ public class SurveyService extends RestService<Survey> {
 	protected JpaRepository<Survey, Integer> getDao() {
 		return this.dao;
 	}
-	
+	/**
+	* Méthode permettant de retourner le sondage en cours
+    *
+    * @return survey de type Survey
+    */
 	public Survey getCurrentSurvey() {
 		List<Survey> surveys = this.readAll();
 		Survey currentSurvey = null;

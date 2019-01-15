@@ -6,7 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+/**
+* Bean représentant un Client comprenant en attribut une Id, un nom, un prénom,
+* un numéro de téléphone, une adresse mail et un numéro de compte.
+*
+* @author Adminl
+*
+*/
 @Entity
 @Table(name="customer")
 public class Customer {

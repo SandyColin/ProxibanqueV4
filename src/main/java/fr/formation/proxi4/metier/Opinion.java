@@ -10,7 +10,16 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
+/**
+* Bean représentant une opinion laissé par un client lorsqu'il répond à un
+* sondage. L'opinion a les attributs id pour identifier l'opinion, isPositive
+* pour identifier le statut de l'opinion, le commentaire relatif à l'opinion,
+* le client qui a répondu au sondage et le sondage correspondant à l'opinion
+* donnée.
+*
+* @author Adminl
+*
+*/
 @Entity
 @Table(name="opinion")
 public class Opinion {

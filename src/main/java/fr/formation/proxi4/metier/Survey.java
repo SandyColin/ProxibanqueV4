@@ -12,7 +12,13 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+/**
+* Bean représentant un sondage. Il a comme attributs une id, une date de
+* commencement, une date prévisionnelle de fin et une date de fermeture.
+*
+* @author Adminl
+*
+*/
 @Entity
 @Table(name="survey")
 @JsonIgnoreProperties({"hibernateLazyInitializer" , "handler" , "opinions"})

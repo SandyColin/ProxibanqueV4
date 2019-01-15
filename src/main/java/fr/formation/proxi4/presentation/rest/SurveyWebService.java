@@ -12,7 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.formation.proxi4.metier.Survey;
 import fr.formation.proxi4.metier.SurveyService;
 
-
+/**
+* Classe permettant la liaison entre le backend et le frontend d'un objet
+* opinion.
+*
+* @author Adminl
+*
+*/
 @RestController
 @RequestMapping("/survey")
 @Transactional(readOnly=true)
@@ -21,7 +27,11 @@ public class SurveyWebService {
 
 	@Autowired
 	private SurveyService surveyService;
-	
+	/**
+	* Méthode permettant de vérifier si un sondage est en cours
+    *
+    * @return
+    */
 	@GetMapping
 	public Survey checkSurvey() {
 		return this.surveyService.getCurrentSurvey();

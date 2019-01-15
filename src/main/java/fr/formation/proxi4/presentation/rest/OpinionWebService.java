@@ -10,7 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.formation.proxi4.metier.Opinion;
 import fr.formation.proxi4.metier.OpinionService;
-
+/**
+* Classe permettant la liaison entre le backend et le frontend d'un objet
+* opinion.
+*
+* @author Adminl
+*
+*/
 @RestController
 @RequestMapping("/opinion")
 @Transactional(readOnly=true)
@@ -19,7 +25,11 @@ public class OpinionWebService {
 	
 	@Autowired
 	private OpinionService opinionService;
-	
+	/**
+	* Méthode permettant de créer un avis dans la BDD via le Web Service
+    *
+    * @return opinion de type Opinion
+    */
 	@PostMapping
 	public Opinion createOpinion(@RequestBody Opinion opinion) {
 		return this.opinionService.create(opinion);
