@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import fr.formation.proxi4.metier.SurveyService;
+import fr.formation.proxi4.ProxiConstants;
 import fr.formation.proxi4.metier.Survey;
 
 @Controller
@@ -40,7 +41,7 @@ public class ViewController {
 	}
 	
 	@RequestMapping("surveys")
-	public ModelAndView loadSurveys() {
+	public ModelAndView showSurveys() {
 		LOGGER.debug("Vous entrez sur la page sondage");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("surveys");
@@ -48,15 +49,15 @@ public class ViewController {
 		return mav;
 	}
 	
-	@RequestMapping("survey")
-	public ModelAndView showSurvey(Integer id) {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("survey");
-		Survey survey = this.surveyService.read(id);
-		Hibernate.initialize(survey);
-		mav.addObject("survey", survey);
-		return mav;
-	}
+//	@RequestMapping("survey")
+//	public ModelAndView loadSurvey(Integer id) {
+//		ModelAndView mav = new ModelAndView();
+//		mav.setViewName("survey");
+//		Survey survey = this.surveyService.read(id);
+//		Hibernate.initialize(survey);
+//		mav.addObject("survey", survey);
+//		return mav;
+//	}
 	
 	@RequestMapping("form")
 	public ModelAndView create() { 
@@ -74,18 +75,30 @@ public class ViewController {
 		this.surveyService.create(survey);	
 		message = "Sondage bien ajouté !";	
 		attributes.addFlashAttribute("message", message);
-		return "redirect:/index.html";
+		return ProxiConstants.REDIRECT_TO_INDEX;
 	}
 	
 	
-	@RequestMapping("close")
+//	@RequestMapping("close")
+//	public String closeCurrentSurvey(Integer id, RedirectAttributes attributes) {
+//		ModelAndView mav = new ModelAndView();
+//		mav.setViewName("close");
+//		Survey survey = this.surveyService.read(id);
+//		Hibernate.initialize(survey);
+//		survey.setCloseDate(LocalDate.now());
+//		this.surveyService.update(survey);
+//		return ProxiConstants.REDIRECT_TO_INDEX;
+//	}
+	
+	@RequestMapping(path = "index", method = RequestMethod.POST)
 	public String closeCurrentSurvey(Integer id, RedirectAttributes attributes) {
-		ModelAndView mav = new ModelAndView();
-		mav.setViewName("close");
+		
 		Survey survey = this.surveyService.read(id);
 		Hibernate.initialize(survey);
 		survey.setCloseDate(LocalDate.now());
 		this.surveyService.update(survey);
-		return "redirect:/index.html";
+		String message = "Le sondage a bien été cloturé à la date du jour !";	
+		attributes.addFlashAttribute("message", message);
+		return ProxiConstants.REDIRECT_TO_INDEX;
 	}
 }
