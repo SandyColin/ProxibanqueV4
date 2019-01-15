@@ -42,7 +42,6 @@ public class ViewController {
 		LOGGER.debug("Message récupéré après redirection ? '" + message + "'");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
-		mav.addObject("message", message);
 		Survey currentSurvey = this.surveyService.getCurrentSurvey();
 		mav.addObject("survey", currentSurvey);
 		return mav;
@@ -125,7 +124,7 @@ public class ViewController {
 		Survey survey = this.surveyService.read(id);
 		survey.setCloseDate(LocalDate.now());
 		this.surveyService.update(survey);
-		String message = "Le sondage a bien été cloturé à la date du jour !";	
+		String message = "Le sondage a été cloturé à la date du jour !";	
 		attributes.addFlashAttribute("message", message);
 		return ProxiConstants.REDIRECT_TO_INDEX;
 	}
