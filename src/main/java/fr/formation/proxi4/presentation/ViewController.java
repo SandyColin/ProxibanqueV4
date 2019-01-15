@@ -15,11 +15,11 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import fr.formation.proxi4.metier.SurveyService;
-<<<<<<< HEAD
+
 import fr.formation.proxi4.metier.OpinionService;
-=======
+
 import fr.formation.proxi4.ProxiConstants;
->>>>>>> 15da8aa0810ef5c3069f4537bf73d2a022589b8a
+
 import fr.formation.proxi4.metier.Survey;
 
 
