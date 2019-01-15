@@ -1,5 +1,6 @@
 package fr.formation.proxi4.metier;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,8 @@ public class SurveyService extends RestService<Survey> {
 		List<Survey> surveys = this.readAll();
 		Survey currentSurvey = new Survey();
 		for(Survey survey: surveys) {
-			if(survey.getCloseDate() == null) {
+			if(survey.getCloseDate() == null && LocalDate.now().isAfter(survey.getStartingDate())) {
+				
 				currentSurvey = survey;
 			}
 		}
