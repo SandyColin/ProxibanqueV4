@@ -1,6 +1,7 @@
-.button-container {
+.form-row{
 	display:flex;
 	margin :10px;
+	text-align:center;
 	justify-content:space-around;
 }
 

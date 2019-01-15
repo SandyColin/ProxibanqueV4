@@ -67,8 +67,8 @@
 		<br />
 
 
-		<div class="button-container">
-			<div>
+		<div class="btn-group btn-group-lg" >
+			<div class="btn-group">
 				<a href="surveys.html">
 					<button class="button">Afficher les données des sondages</button>
 					<br>
@@ -78,14 +78,14 @@
 			
 			<c:if test="${empty survey}"> 
 			
-			<div>
+			<div class="btn-group">
 				<a href="form.html">
 					<button class="button">Créer un sondage</button>
 				</a>
 			</div>
 			</c:if>
 			<c:if test="${not empty survey}">
-				<div>
+				<div class="btn-group">
 					<a href="close.html?id=${survey.id}">
 						<button class="button">Cloturer le sondage</button>
 					</a>
