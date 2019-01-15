@@ -47,9 +47,31 @@
 			</div>
 		</div>
 	</header>
+<<<<<<< HEAD
 
 
 	<section>
+=======
+<<<<<<< HEAD
+	<section id="index-display">
+		<h1 class="page-title"></h1>
+
+		<div>
+			<c:if test="${survey.isActive}">
+				<div>
+					<a href="close.html?id= ${survey.id}">
+						<button class="button">Cloturer le sondage en cours</button>
+					</a>
+				</div>
+			</c:if>
+			<c:if test="${survey.isActive }">
+				<p>Le sondage n°${survey.id} est en cours</p>
+			</c:if>
+=======
+	
+		
+		<section>
+>>>>>>> 902e6c11dfcd8d4aab7898c9302db40eda66af31
 		<div class="message">
 
 			<c:if test="${not empty message }">
@@ -61,6 +83,13 @@
 			<c:if test="${empty survey}">
 				<h2>Pas de sondage en cours</h2>
 			</c:if>
+<<<<<<< HEAD
+=======
+			
+			
+
+>>>>>>> 15da8aa0810ef5c3069f4537bf73d2a022589b8a
+>>>>>>> 902e6c11dfcd8d4aab7898c9302db40eda66af31
 		</div>
 		<br />
 
@@ -88,10 +117,26 @@
 						<button class="button">Cloturer le sondage</button>
 					</a>
 				</div>
+<<<<<<< HEAD
 			</c:if>
 
 		</div>
 
+=======
+<<<<<<< HEAD
+=======
+				<c:if test="${survey.isActive}">
+					<div>
+						<a href="close.html?id= ${survey.id}">
+							<button class="button">Cloturer un sondage</button>
+						</a>
+					</div>
+				</c:if>
+
+>>>>>>> 15da8aa0810ef5c3069f4537bf73d2a022589b8a
+			</div>
+		
+>>>>>>> 902e6c11dfcd8d4aab7898c9302db40eda66af31
 
 	</section>
 

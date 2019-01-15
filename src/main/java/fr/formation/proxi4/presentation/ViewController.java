@@ -15,7 +15,11 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import fr.formation.proxi4.metier.SurveyService;
+<<<<<<< HEAD
+import fr.formation.proxi4.metier.OpinionService;
+=======
 import fr.formation.proxi4.ProxiConstants;
+>>>>>>> 15da8aa0810ef5c3069f4537bf73d2a022589b8a
 import fr.formation.proxi4.metier.Survey;
 
 
@@ -28,6 +32,9 @@ public class ViewController {
 	
 	@Autowired
 	private SurveyService surveyService;
+	
+	@Autowired
+	private OpinionService opinionService;
 	
 	@RequestMapping({ "", "index" })
 	public ModelAndView index(@RequestParam(required = false) String message) {
@@ -47,6 +54,7 @@ public class ViewController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("surveys");
 		mav.addObject("surveys", this.surveyService.readAll());
+		mav.addObject("responseSurvey", this.opinionService.getAllOpinions());
 		return mav;
 	}
 	
@@ -67,6 +75,8 @@ public class ViewController {
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("form");
 		mav.addObject("survey", new Survey());
+		LOGGER.debug(
+				"Formulaire de création d'un sondage");
 		return mav;
 	}
 	

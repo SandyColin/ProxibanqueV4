@@ -27,7 +27,7 @@
 <link
 	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
 	rel='stylesheet' type='text/css'>
-
+"src/main/java/fr/formation/blog/presentation/ViewController.java"
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
@@ -52,14 +52,16 @@
 	<section id="clients-display">
 		<h1 class="page-title">Liste des sondages</h1>
 		<div class="client-display">
-			<c:forEach var="survey" items="${surveys}">
+			<c:forEach var="response" items="${responseSurvey}">
 				<div class="client-container">
-						<p class="name">${survey.id}</p>
-<%-- 						<p class="name">${opinion.comment}</p> --%>
-<%-- 						<p class="text">${opinion.comment}</p> --%>
-<%-- 						<p class="text">Date de fin prévue : ${survey.provisionalDate}</p> --%>
-						<div class="button-container"></div>
+<%-- 					<p class="name">${survey.startingDate}</p> --%>
+<%-- 					<p class="name">${survey.closeDate}</p> --%>
+					<div class="button-container"></div>
+					<div var="response" items="${responseSurvey}">
+						<p>le nombre d'avis positifs est : ${response.nbPos}</p>
 					</div>
+				</div>
+
 			</c:forEach>
 			<div>
 				<a href="index.html">
