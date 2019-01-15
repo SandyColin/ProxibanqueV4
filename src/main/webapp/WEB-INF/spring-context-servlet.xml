@@ -21,7 +21,6 @@
 										  fr.formation.proxi4.metier
 										  fr.formation.proxi4.persistance" />
 	<!-- Configuration générale importante pour le module MVC. -->
-	<mvc:annotation-driven />
 	<tx:annotation-driven/>
 	<!-- Idem pour la gestion de la transaction. -->
 	<mvc:annotation-driven>

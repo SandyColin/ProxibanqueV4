@@ -21,7 +21,7 @@ public class SurveyService extends RestService<Survey> {
 	
 	public Survey getCurrentSurvey() {
 		List<Survey> surveys = this.readAll();
-		Survey currentSurvey = new Survey();
+		Survey currentSurvey = null;
 		for(Survey survey: surveys) {
 			if(survey.getCloseDate() == null && LocalDate.now().isAfter(survey.getStartingDate())) {
 				

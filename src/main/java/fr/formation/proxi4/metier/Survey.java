@@ -33,8 +33,11 @@ public class Survey {
 	@OneToMany(mappedBy= "survey")
 	private List<Opinion> opinions;
 	
-	@Column
-	private Boolean isActive;
+	
+	
+	
+
+	
 
 	public Integer getId() {
 		return id;
@@ -76,13 +79,7 @@ public class Survey {
 		this.opinions = opinions;
 	}
 
-	public Boolean getIsActive() {
-		return isActive;
-	}
-
-	public void setIsActive(Boolean isActive) {
-		this.isActive = isActive;
-	}
+	
 	
 	
 }

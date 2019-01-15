@@ -32,6 +32,9 @@
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -54,13 +57,13 @@
 			<label for="startingDate">Date de démarrage :</label>
 			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
 				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
-			<form:input id="startingDate" path="startingDate" class="form-control" />
+			<form:input type="date" id="startingDate" path="startingDate" class="form-control" />
 		</div>
 		<div class="form-group">
 			<label for="provisionalDate">Date de fin prévisionnelle :</label>
 			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
 				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
-			<form:input id="provisionalDate" path="provisionalDate" class="form-control"></form:input>
+			<form:input type="date" id="provisionalDate" path="provisionalDate" class="form-control"></form:input>
 		</div>
 		<button>Valider</button>
 		<a href="index.html">Retour à l'accueil</a>

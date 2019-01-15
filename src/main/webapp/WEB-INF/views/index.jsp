@@ -31,6 +31,9 @@
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -44,46 +47,51 @@
 			</div>
 		</div>
 	</header>
-	
-		
-		<section>
-		<div class="message">
-				
 
-			<c:if test="${survey.isActive }">
-			<h2> Le sondage n°${survey.id} est en cours</h2>
+
+	<section>
+		<div class="message">
+
+			<c:if test="${not empty message }">
+				<h4 style="font-weight:bold">${message} </h4>
 			</c:if>
-			<c:if test="${!survey.isActive }">
-			<h2> Pas de sondage en cours</h2>
+			<c:if test="${not empty survey }">
+				<h2>Le sondage n°${survey.id} est en cours</h2>
 			</c:if>
+			<c:if test="${empty survey}">
+				<h2>Pas de sondage en cours</h2>
+			</c:if>
+		</div>
+		<br />
+
+
+		<div class="button-container">
+			<div>
+				<a href="surveys.html">
+					<button class="button">Afficher les données des sondages</button>
+					<br>
+				</a>
+				
+			</div>
 			
+			<c:if test="${empty survey}"> 
 			
+			<div>
+				<a href="form.html">
+					<button class="button">Créer un sondage</button>
+				</a>
+			</div>
+			</c:if>
+			<c:if test="${not empty survey}">
+				<div>
+					<a href="close.html?id=${survey.id}">
+						<button class="button">Cloturer le sondage</button>
+					</a>
+				</div>
+			</c:if>
 
 		</div>
-		<br/>
-		
 
-			<div class="button-container">
-				<div>
-					<a href="surveys.html">
-						<button class="button">Afficher les données des sondages</button>
-					</a>
-				</div>
-				<div>
-					<a href="form.html">
-						<button class="button">Créer un sondage</button>
-					</a>
-				</div>
-				<c:if test="${survey.isActive}">
-					<div>
-						<a href="close.html?id= ${survey.id}">
-							<button class="button">Cloturer un sondage</button>
-						</a>
-					</div>
-				</c:if>
-
-			</div>
-		
 
 	</section>
 
