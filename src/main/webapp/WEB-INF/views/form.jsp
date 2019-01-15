@@ -52,14 +52,10 @@
 		onsubmit="validateForm(event)">
 		<div class="form-group">
 			<label for="startingDate">Date de démarrage :</label>
-			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
-				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
 			<form:input id="startingDate" path="startingDate" class="form-control" />
 		</div>
 		<div class="form-group">
 			<label for="provisionalDate">Date de fin prévisionnelle :</label>
-			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
-				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
 			<form:input id="provisionalDate" path="provisionalDate" class="form-control"></form:input>
 		</div>
 		<button>Valider</button>
