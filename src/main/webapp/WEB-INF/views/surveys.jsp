@@ -27,7 +27,6 @@
 <link
 	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
 	rel='stylesheet' type='text/css'>
-"src/main/java/fr/formation/blog/presentation/ViewController.java"
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
@@ -54,15 +53,24 @@
 		<div class="client-display">
 			<c:forEach var="response" items="${responseSurvey}">
 				<div class="client-container">
-<%-- 					<p class="name">${survey.startingDate}</p> --%>
-<%-- 					<p class="name">${survey.closeDate}</p> --%>
 					<div class="button-container"></div>
 					<div var="response" items="${responseSurvey}">
-						<p>le nombre d'avis positifs est : ${response.nbPos}</p>
+						<p>${response.openDate} | Nombre d'avis positifs : ${response.nbPos} | Nombre d'avis négatifs : ${response.nbNeg}</p>
 					</div>
 				</div>
 
 			</c:forEach>
+			
+<!-- 			<tbody> -->
+<%-- 					<c:forEach var="response" items="${responseSurvey}"> --%>
+<!-- 						<tr> -->
+<%-- 							<td>${responseServey.openDate}</td> --%>
+<%-- 							<td>Nombre d'avis positif: ${responseServey.nbPos}</td> --%>
+<%-- 							<td>Nombre d'avis négatif: ${responseServey.nbNeg}</td> --%>
+<!-- 						</tr> -->
+<%-- 					</c:forEach> --%>
+<!-- 				</tbody> -->
+			
 			<div>
 				<a href="index.html">
 					<button class="button">Revenir à l'accueil</button>
