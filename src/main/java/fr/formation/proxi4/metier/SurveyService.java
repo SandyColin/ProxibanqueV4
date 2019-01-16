@@ -33,7 +33,7 @@ public class SurveyService extends RestService<Survey> {
 		List<Survey> surveys = this.readAll();
 		Survey currentSurvey = null;
 		for(Survey survey: surveys) {
-			if(survey.getCloseDate() == null && LocalDate.now().isAfter(survey.getStartingDate())) {
+			if(survey.getCloseDate() == null && LocalDate.now().isAfter(survey.getStartingDate().minusDays(1))) {
 				
 				currentSurvey = survey;
 			}

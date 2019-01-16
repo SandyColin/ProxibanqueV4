@@ -12,3 +12,6 @@ section{
 .message{
 	justify-content:center;
 }
+header{
+	margin-bottom:-125px;
+}

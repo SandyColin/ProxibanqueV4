@@ -30,7 +30,18 @@ public class CustomerService extends RestService<Customer> {
      * @return
      */
 	public Integer getCustomerIdByClientNumber(String clientNumber) {
-		return this.dao.findByClientNumber(clientNumber).getId();
+		// return this.dao.findByClientNumber(clientNumber).getId();
+		Integer id = null;
+		if (clientNumber != null && !clientNumber.isEmpty()) {
+
+			Customer customer = this.dao.findByClientNumber(clientNumber);
+
+			if (customer != null) {
+
+				id = customer.getId();
+			}
+		}
+		return id;
 	}
 
 }

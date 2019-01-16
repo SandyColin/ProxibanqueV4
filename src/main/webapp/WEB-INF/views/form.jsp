@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1" isELIgnored="false" %>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -31,76 +31,67 @@
 
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="css/form.css" rel="stylesheet">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
 <body id="page-top">
-	
+
 	<!-- Header -->
 	<header class="masthead">
 		<div class="container">
-			<div class="intro-text" style="padding-top: 150px; padding-bottom: 200px;">
+			<div class="intro-text"
+				style="padding-top: 150px; padding-bottom: 200px;">
 				<div class="intro-lead-in">Bienvenue sur le système
 					d'information</div>
 				<div class="intro-heading text-uppercase">PROXIBANQUE</div>
 			</div>
 		</div>
 	</header>
-	
-	<form:form modelAttribute="survey" method="post" action="form.html"
-		onsubmit="validateForm(event)">
-		<div class="form-group">
-			<label for="startingDate">Date de démarrage :</label>
+	<section>
+		<form:form modelAttribute="survey" method="post" action="form.html"
+			onsubmit="validateForm(event)">
+			<div class="form-group">
+				<label for="startingDate">Date de démarrage :</label>
 
-			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
+				<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
 				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
-			<form:input type="date" id="startingDate" path="startingDate" class="form-control" />
-		</div>
-		<div class="form-group">
-			<label for="provisionalDate">Date de fin prévisionnelle :</label>
-			<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
+				<form:input type="date" id="startingDate" path="startingDate"
+					class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="provisionalDate">Date de fin prévisionnelle :</label>
+				<!-- Utilisation d'un tag Spring pour lier un champ de saisie avec un 
 				attribut de l'objet (classe Article) défini dans le modelAttribute du form:form. -->
-			<form:input type="date" id="provisionalDate" path="provisionalDate" class="form-control"></form:input>
-		</div>
-		<button>Valider</button>
-		<a href="index.html">Retour à l'accueil</a>
-	</form:form>
+				<form:input type="date" id="provisionalDate" path="provisionalDate"
+					class="form-control"></form:input>
+			</div>
+			<button class="btn btn-warning">Valider</button>
+			<a href="index.html">Retour à l'accueil</a>
+		</form:form>
+	</section>
 	<script src="js/form.js"></script>
-	
-	
-	
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<span class="copyright">Copyright &copy; Proxibanque 2018</span>
+				</div>
+				<div class="col-md-4">
+					<ul class="list-inline quicklinks">
+						<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+						<li class="list-inline-item"><a href="#">Terms of Use</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-<!-- 	<section class="head"></section> -->
-<!-- 	<h1 class="page-title">Création d'un sondage</h1> -->
-<!-- 	<div class="form-cont"> -->
-<!-- 		<form method="post" action="form.html"> -->
-<!-- 			<div class="edit-form"> -->
-<!-- 				<div class="label-container"> -->
-<!-- 					<label for="beginDate">Date de démarage</label>  -->
-<%-- 					<input type="text" id="beginDate" value="${survey.startingDate}" name="beginDate" maxlength="45"> --%>
-<!-- 				</div> -->
-<!-- 				<div class="input-container"> -->
-<!-- 				<label for="endDate">Date de fin prévisionnelle</label>  -->
-<%-- 					<input type="text" id="endDate" value="${survey.provisionalDate}" name="endDate" maxlength="45"> --%>
-					
-<!-- 				</div>  -->
-				
-<!-- 			</div> -->
-<!-- 		<div class="buttons"> -->
-<!-- 		<a href="index.html"> -->
-<!-- 			<button class="button">Valider</button> -->
-<!-- 			</a> -->
-			
-<!-- 			<a href="index.html"> -->
-<!-- 				<button class="button">Retour à l'accueil</button> -->
-<!-- 			</a> -->
-<!-- 		</div> -->
-<!-- 		</form> -->
-<!-- 		</div> -->
-	<!-- Team -->
-	</body>
-	</html>
+</body>
+</html>

@@ -29,7 +29,7 @@
 	rel='stylesheet' type='text/css'>
 <!-- Custom styles for this template -->
 <link href="css/agency.min.css" rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
+<link href="css/surveys.css" rel="stylesheet">
 
 </head>
 
@@ -48,57 +48,54 @@
 	</header>
 
 	<!-- Affichage des clients -->
-	<section id="clients-display">
+	<section id="surveys-display">
 		<h1 class="page-title">Liste des sondages</h1>
-		<div class="client-display">
-			<%-- 			<c:forEach var="response" items="${responseSurvey}"> --%>
-			<!-- 				<div class="client-container"> -->
-			<!-- 					<div class="button-container"></div> -->
-			<%-- 					<div var="response" items="${responseSurvey}"> --%>
-			<%-- 						<p>${response.openDate} | Nombre d'avis positifs : ${response.nbPos} | Nombre d'avis négatifs : ${response.nbNeg}</p> --%>
-			<!-- 					</div> -->
-			<!-- 				</div> -->
-
-			<%-- 			</c:forEach> --%>
-
-			<!-- 			<tbody> -->
-			<%-- 					<c:forEach var="response" items="${responseSurvey}"> --%>
-			<!-- 						<tr> -->
-			<%-- 							<td>${responseServey.openDate}</td> --%>
-			<%-- 							<td>Nombre d'avis positif: ${responseServey.nbPos}</td> --%>
-			<%-- 							<td>Nombre d'avis négatif: ${responseServey.nbNeg}</td> --%>
-			<!-- 						</tr> -->
-			<%-- 					</c:forEach> --%>
-			<!-- 				</tbody> -->
+		<div class="survey-display">
+			
 			<table class="table table-hover">
-			<thead>
-				<tr>
-					<th class="liste">Date de début de sondage</th>
-					<th class="listecompte">Nombre d'avis Positifs</th>
-					<th class="listecompte">Nombre d'avis négatifs</th>
-
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="response" items="${responseSurvey}">
-
+				<thead>
 					<tr>
-						<td class="listecompte">${response.openDate}</td>
-						<td class="listecompte">${response.nbPos}</td>
-						<td class="listecompte">${response.nbNeg}</td>
-
+						<th class="liste">Date de début de sondage</th>
+						<th class="listecompte">Nombre d'avis Positifs</th>
+						<th class="listecompte">Nombre d'avis négatifs</th>
 
 					</tr>
-				</c:forEach>
-			</tbody></table>
+				</thead>
+				<tbody>
+					<c:forEach var="response" items="${responseSurvey}">
+
+						<tr>
+							<td class="listecompte">${response.openDate}</td>
+							<td class="listecompte">${response.nbPos}</td>
+							<td class="listecompte">${response.nbNeg}</td>
+
+
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
 
 			<div>
 				<a href="index.html">
-					<button class="button">Revenir à l'accueil</button>
+					<button class="btn btn-warning">Revenir à l'accueil</button>
 				</a>
 			</div>
 		</div>
 	</section>
-	<!-- Team -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<span class="copyright">Copyright &copy; Proxibanque 2018</span>
+				</div>
+				<div class="col-md-4">
+					<ul class="list-inline quicklinks">
+						<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+						<li class="list-inline-item"><a href="#">Terms of Use</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
 </body>
 </html>

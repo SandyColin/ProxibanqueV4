@@ -4,5 +4,10 @@ button {
 
 section{
 	text-align:center;
-	justify-content : center;
+	
+	margin: auto;
+	width:20%;
+}
+header{
+	margin-bottom:-75px;
 }
