@@ -56,6 +56,7 @@
 				<thead>
 					<tr>
 						<th class="liste">Date de début de sondage</th>
+						<th class="liste">Date de fin de sondage</th>
 						<th class="listecompte">Nombre d'avis Positifs</th>
 						<th class="listecompte">Nombre d'avis négatifs</th>
 
@@ -65,9 +66,10 @@
 					<c:forEach var="response" items="${responseSurvey}">
 
 						<tr>
-							<td class="listecompte">${response.openDate}</td>
-							<td class="listecompte">${response.nbPos}</td>
-							<td class="listecompte">${response.nbNeg}</td>
+							<td class="listesurveys">${response.openDate}</td>
+							<td class="listesurveys">${response.endDate}</td>
+							<td class="listesurveys">${response.nbPos}</td>
+							<td class="listesurveys">${response.nbNeg}</td>
 
 
 						</tr>

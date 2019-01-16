@@ -42,6 +42,7 @@ public class OpinionService extends RestService<Opinion> {
 		for (Survey survey : surveys) {
 			ResponseSurvey responseSurvey = new ResponseSurvey();
 			responseSurvey.setOpenDate(survey.getStartingDate());
+			responseSurvey.setEndDate(survey.getCloseDate());
 			responseSurveys.add(responseSurvey);
 			responseSurvey.setNbNeg(this.countNegative(survey.getOpinions()));
 			responseSurvey.setNbPos(this.countPositive(survey.getOpinions()));

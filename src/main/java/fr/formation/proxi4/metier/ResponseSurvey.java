@@ -18,6 +18,16 @@ public class ResponseSurvey {
 	
 	public LocalDate openDate;
 	
+	public LocalDate endDate;
+	
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
 	public Integer getNbPos() {
 		return nbPos;
 	}
